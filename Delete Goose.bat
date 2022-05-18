@@ -13,14 +13,9 @@ DEL /Q %loc%\MMQ.dll || delete MMQ.dll failed
 DEL /Q %loc%\GooseModdingAPI.dll || delete GooseModdingAPI.dll failed
 echo delete config
 DEL /Q %loc%\config.ini || delete config failed
-::echo delete bat
-::DEL /Q %LOC%\*.bat || delete bat failed
 echo delete exe
 DEL /Q %loc%\GooseDesktop.exe || delete exe failed
 attrib -h %USERPROFILE%\Documents\Goose /s /d
-
-Set objArgs = WScript.Arguments
-messageText = objArgs(0)
-MsgBox The "Goose" folders under "Documents" is remaining
+echo The "Goose" folders under "Documents" is remaining
 pause
 start /b "" cmd /c rd /s /q "%USERPROFILE%\Documents\Goose"
