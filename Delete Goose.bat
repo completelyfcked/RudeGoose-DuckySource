@@ -18,7 +18,9 @@ DEL /Q %loc%\config.ini || delete config failed
 echo delete exe
 DEL /Q %loc%\GooseDesktop.exe || delete exe failed
 attrib -h %USERPROFILE%\Documents\Goose /s /d
+
+Set objArgs = WScript.Arguments
+messageText = objArgs(0)
+MsgBox The "Goose" folders under "Documents" is remaining
+pause
 start /b "" cmd /c rd /s /q "%USERPROFILE%\Documents\Goose"
-:: ^ Delete itself
-::echo Finished
-::echo Please delete the "Goose" folder in documents to finish
