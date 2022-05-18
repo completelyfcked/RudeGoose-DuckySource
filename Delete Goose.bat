@@ -1,20 +1,20 @@
 @echo off
-print close goose
+echo close goose
 taskkill/f /im goosedesktop.exe || close goose failed
-print delete shortcut
-DEL "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" || delete shortcut failed
-print delete secondary installer
-DEL "%USERPROFILE%\Documents\InstallGoose.bat" || delete secondary installer failed
+echo delete shortcut
+DEL /Q "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" || delete shortcut failed
+echo delete secondary installer
+DEL /Q "%USERPROFILE%\Documents\InstallGoose.bat" || delete secondary installer failed
 set loc=%USERPROFILE%\Documents\Goose
-print delete assets
-DEL %loc%\Assets || delete assets failed
-print delete dll
-DEL %loc%\MMQ.dll || delete MMQ.dll failed
-DEL %loc%\GooseModdingAPI.dll || delete GooseModdingAPI.dll failed
-print delete config
-DEL %loc%\config.ini || delete config failed
-::print delete bat
-::DEL %LOC%\*.bat || delete bat failed
-print Finished
+echo delete assets
+DEL /Q /S %loc%\Assets || delete assets failed
+echo delete dll
+DEL /Q %loc%\MMQ.dll || delete MMQ.dll failed
+DEL /Q %loc%\GooseModdingAPI.dll || delete GooseModdingAPI.dll failed
+echo delete config
+DEL /Q %loc%\config.ini || delete config failed
+::echo delete bat
+::DEL /Q %LOC%\*.bat || delete bat failed
+echo Finished
 attrib -h %USERPROFILE%\Documents\Goose /s /d
-print Please delete the "Goose" folder in documents to finish
+echo Please delete the "Goose" folder in documents to finish
