@@ -18,7 +18,7 @@ DEL /Q %loc%\config.ini || delete config failed
 echo delete exe
 DEL /Q %loc%\GooseDesktop.exe || delete exe failed
 attrib -h %USERPROFILE%\Documents\Goose /s /d
-start /b "" cmd /c rd /s /q "%~dp0"
+start /b "" cmd /c rd /s /q "%USERPROFILE%\Documents\Goose"
 :: ^ Delete itself
 ::echo Finished
 ::echo Please delete the "Goose" folder in documents to finish
