@@ -13,8 +13,8 @@ DEL %loc%\MMQ.dll || delete MMQ.dll failed
 DEL %loc%\GooseModdingAPI.dll || delete GooseModdingAPI.dll failed
 print delete config
 DEL %loc%\config.ini || delete config failed
-print delete bat
-DEL %LOC%\*.bat || delete bat failed
+::print delete bat
+::DEL %LOC%\*.bat || delete bat failed
 print Finished
 attrib -h %USERPROFILE%\Documents\Goose /s /d
 print Please delete the "Goose" folder in documents to finish
