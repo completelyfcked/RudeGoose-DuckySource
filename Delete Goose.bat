@@ -7,7 +7,7 @@ echo delete secondary installer
 DEL /Q "%USERPROFILE%\Documents\InstallGoose.bat" || delete secondary installer failed
 set loc=%USERPROFILE%\Documents\Goose
 echo delete assets
-DEL /Q /S %loc%\Assets || delete assets failed
+DEL /Q %loc%\Assets || delete assets failed
 echo delete dll
 DEL /Q %loc%\MMQ.dll || delete MMQ.dll failed
 DEL /Q %loc%\GooseModdingAPI.dll || delete GooseModdingAPI.dll failed
